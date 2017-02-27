@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Integrationshilfe</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+
+    <!-- Fonts from Google -->
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Montserrat|Lato'>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+
+    <!-- library css -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/spinner.css"/>
+
+    <!-- our css-->
+    <link rel="stylesheet" href="css/bootstrap-distant.css"/>
+    <link rel="stylesheet" href="css/distant.css"/>
+
+    <!-- library scripts -->
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+     <script type="text/javascript" src="lib/d3.v3/index.js"></script>
+    <script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    
+
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controller/homeCrtl.js"></script>
+    <script type="text/javascript" src="js/controller/aboutCrtl.js"></script>
+    <script type="text/javascript" src="js/controller/uns.js"></script>
+ <script type="text/javascript" src="js/controller/howCrtl.js"></script>
+</head>
+
+<body class="ng-cloak" ng-app="ViZu" ng-cloak>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#home"><img src="img/IHPALogosmall.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" ng-controller="activeNav" id="myNav">
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-class="{ active: isActive('/home')}"><a href="#home"><span
+                        class="glyphicon glyphicon-home"></span></a></li>
+                 <li ng-class="{ active: isActive('/uns')}"><a href="#uns">Über uns</a></li>
+                 <li ng-class="{ active: isActive('/kontackt')}"><a href="#kontakt">Kontakt</a></li> 
+                 <li ng-class="{ active: isActive('/about')}"><a href="#about">Zusatzinfo</a></li>
+                <li><a href="https://www.facebook.com/groups/821681984602400/"><span
+                        class="fa fa-facebook-official"></span></a></li>
+            </ul>
+           <!-- <div class="col-sm-6 col-md-6">
+                <form class="navbar-form" role="search" ng-controller="Main">
+                    <div class="input-group">
+                        <input type="text" placeholder="what are you searching for ?" ng-model='myquery'
+                               class="form-control" ng-keypress="EnterKeyPressed($event)"/>
+                        <div class="input-group-btn">
+                            <button uib-popover="Enter text please !" popover-placement="bottom" popover-is-open="check"
+                                    class="btn btn-default" ng-click="search()"><i
+                                    class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+             add later for login or feedback an icon here !!
+      <ul class="nav navbar-nav navbar-right">
+                <li ng-click="openfeed()"> <span class="glyphicon glyphicon-log-in"></span></li>
+                </ul>-->
+        </div>
+    </div>
+
+</nav>
+
+<section class="mycontainer">
+
+    <ng-view></ng-view>
+
+</section>
+<footer class="myfooter">  
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-12 col-lg-12">
+                    <div class = "centering">
+                        <img src="img/solidarity.png">
+                        <h4>Wir freuen uns über Ihre Spende</h4>
+                        <h4>Kontaktieren Sie uns</h4>
+                        <br> </br>
+                    <img src="img/crossroads.png" alt="Team">
+                    <h5><span><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                        <strong> Ludwig Schmidlehner</strong>, Integrationshilfe</h5>
+                    <h5><span><i class="fa fa-address-card" aria-hidden="true"></i>
+                        </span>Vorsitzender Integrationshilfe Passau e.V.</h5> 
+                    <h5><span><i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </span>Wilhelm-Niedermayer-Straße 1, 94034 Passau</h5>
+                    <h5><span><i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                        </span> lschmidlehner@t-online.de</h5>
+                         <h5><span><i class="fa fa-mobile" aria-hidden="true"></i>
+                        </span>(0851) 9 88 64 57</h5>
+                <img src="img/IHPALogomedium.png" alt="logo"> 
+                      <p class="text-center"><strong>Integrationshilfe@Copyright 2017</strong></p>
+                </div>
+                </div>
+                          
+
+                     
+            </div>
+            </div> 
+            
+                
+    </footer>
+
+</body>
+
+
+</html>
