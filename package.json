@@ -1,14 +1,33 @@
 {
-  "name":"Integrationehilfe",
+  "name": "Integrationehilfe",
+  "description": "A basic pillarjs server example. Find out more about pillarjs at http://pillarjs.github.io/",
   "version": "1.0.0",
   "author": "sahar mbarek",
-  "main": "server.js",    
-  "dependencies": {
-    "bower": "~1.7.9",
-    "express": "~4.13.4" 
+  "private": false,
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
   },
-"scripts" : {
+  "dependencies": {
+    "config-multipaas": "^0.2.2",
+    "router": "^1.1.4",
+    "send": "^0.13.2",
+    "serve-static": "^1.10.2",
+    "finalhandler": "^0.4.1",
+    "bower": "~1.7.9",
+    "express": "~4.13.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "tap": "^5.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ekamioka/openshift_repository.git"
+  },
+  "scripts": {
     "start": "node server.js"
-},
-"main": "server.js"
+  },
+  "license": "MIT",
+  "main": "server.js"
 }
